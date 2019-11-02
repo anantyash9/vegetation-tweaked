@@ -293,7 +293,7 @@ SETUPTOOLS_DEB_LAYOUT:BOOL=ON
 SET_USER_BREAK_AT_STARTUP:BOOL=OFF
 
 //Name of the computer/site where compile is being run
-SITE:STRING=developer-ROG-G703GXR-G703GXR
+SITE:STRING=developer
 
 //LSB Distrib tag
 UBUNTU:BOOL=TRUE

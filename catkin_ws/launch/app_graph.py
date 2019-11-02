@@ -5,7 +5,7 @@ import dist_updater
 import cv2
 import images
 from reset import reset
-#from vegetationPostgres.vegetation import Vegetation
+from vegetationPostgres.vegetation import Vegetation
 from datetime import date
 
 app = Flask(__name__)
@@ -31,8 +31,8 @@ def scanstart():
 
 @app.route('/stopscan')
 def scanstop():
-    #veg=Vegetation()
-    #veg.pushData('FA12345678',date.today(),'BS767124060',graph_data=dist_updater.json, point_cloud=images.point)
+    veg=Vegetation()
+    veg.pushData('FA12345678',date.today(),'BS767124060',graph_data=dist_updater.json, point_cloud=images.point)
     return Response('scan stopped')
 
 if __name__ == '__main__':

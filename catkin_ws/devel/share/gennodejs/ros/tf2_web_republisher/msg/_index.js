@@ -1,22 +1,22 @@
 
 "use strict";
 
-let TFSubscriptionActionResult = require('./TFSubscriptionActionResult.js');
-let TFSubscriptionActionFeedback = require('./TFSubscriptionActionFeedback.js');
-let TFSubscriptionAction = require('./TFSubscriptionAction.js');
 let TFSubscriptionFeedback = require('./TFSubscriptionFeedback.js');
-let TFSubscriptionActionGoal = require('./TFSubscriptionActionGoal.js');
-let TFSubscriptionGoal = require('./TFSubscriptionGoal.js');
+let TFSubscriptionActionResult = require('./TFSubscriptionActionResult.js');
 let TFSubscriptionResult = require('./TFSubscriptionResult.js');
+let TFSubscriptionGoal = require('./TFSubscriptionGoal.js');
+let TFSubscriptionAction = require('./TFSubscriptionAction.js');
+let TFSubscriptionActionFeedback = require('./TFSubscriptionActionFeedback.js');
+let TFSubscriptionActionGoal = require('./TFSubscriptionActionGoal.js');
 let TFArray = require('./TFArray.js');
 
 module.exports = {
-  TFSubscriptionActionResult: TFSubscriptionActionResult,
-  TFSubscriptionActionFeedback: TFSubscriptionActionFeedback,
-  TFSubscriptionAction: TFSubscriptionAction,
   TFSubscriptionFeedback: TFSubscriptionFeedback,
-  TFSubscriptionActionGoal: TFSubscriptionActionGoal,
-  TFSubscriptionGoal: TFSubscriptionGoal,
+  TFSubscriptionActionResult: TFSubscriptionActionResult,
   TFSubscriptionResult: TFSubscriptionResult,
+  TFSubscriptionGoal: TFSubscriptionGoal,
+  TFSubscriptionAction: TFSubscriptionAction,
+  TFSubscriptionActionFeedback: TFSubscriptionActionFeedback,
+  TFSubscriptionActionGoal: TFSubscriptionActionGoal,
   TFArray: TFArray,
 };
