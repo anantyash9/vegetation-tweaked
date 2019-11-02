@@ -1,2 +1,0 @@
-realsense/ddynamic_reconfigure:realsense/realsense-ros/realsense2_camera:realsense/realsense-ros/realsense2_description:realsense/tf2_web_republisher
--DCATKIN_DEVEL_PREFIX=/home/developer/vegetation-management/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/developer/vegetation-management/catkin_ws/install -G Unix Makefiles
