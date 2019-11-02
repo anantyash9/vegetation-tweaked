@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/developer/vegetation-management/catkin_ws/install/setup.sh
