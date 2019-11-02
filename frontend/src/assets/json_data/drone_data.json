@@ -1,0 +1,97 @@
+[{
+	"zip_Code": 95910,
+	"drones": [{
+			"name": "Drone1",
+			"id": "FA12345678",
+			"date": "20-08-2019",
+			"time": "12:23 PM",
+			"windSpeed": "24",
+			"liveCameraFeed": "https://www.youtube.com/watch?v=v2xNILWoZGI",
+			"pointCloudData": "Image url here",
+			"heatMap": "Image url here",
+			"vegetationGraph": [{
+					"data": [65, 59, 80, 81, 56, 55, 40],
+					"labelData": [65, 59, 80, 81, 56, 55, 40]
+				},
+				{
+					"data": [45, 29, 70, 51, 36, 65, 20],
+					"labelData": [65, 59, 80, 81, 56, 55, 40]
+				},
+				{
+					"data": [55, 19, 60, 91, 46, 15, 50],
+					"labelData": [65, 59, 80, 81, 56, 55, 40]
+				}
+			],
+			"safetyLinee": 80,
+			"wireHeight": 95,
+
+			"rawRBGImage": "overview1_1.png",
+			"algorithmIdentified": "overview1_2.png",
+			"riskProfile_1": "overview1_3.png",
+			"riskProfile_2": "overview1_4.png"
+		},
+		{
+			"name": "Drone2",
+			"id": "FA12345678",
+			"date": "20-08-2019",
+			"time": "12:23 PM",
+			"windSpeed": "24",
+			"liveCameraFeed": "https://www.youtube.com/watch?v=v2xNILWoZGI",
+			"pointCloudData": "Image url here",
+			"heatMap": "Image url here",
+			"vegetationGraph": [{
+					"data": [65, 59, 80, 81, 56, 55, 40],
+					"labelData": [65, 59, 80, 81, 56, 55, 40],
+					"label": "Series A" 
+				},
+				{
+					"data": [45, 29, 70, 51, 36, 65, 20],
+					"labelData": [65, 59, 80, 81, 56, 55, 40],
+					"label": "Series B"
+				},
+				{
+					"data": [55, 19, 60, 91, 46, 15, 50],
+					"labelData": [65, 59, 80, 81, 56, 55, 40],
+					"label": "Series C"
+				}
+			],
+			"safetyLinee": 80,
+			"wireHeight": 95,
+
+			"rawRBGImage": "overview2_1.png",
+			"algorithmIdentified": "overview2_2.png",
+			"riskProfile_1": "overview2_3.png",
+			"riskProfile_2": "overview2_4.png"
+		},
+		{
+			"name": "Drone3",
+			"id": "FA12345678",
+			"date": "20-08-2019",
+			"time": "12:23 PM",
+			"windSpeed": "24",
+			"liveCameraFeed": "https://www.youtube.com/watch?v=v2xNILWoZGI",
+			"pointCloudData": "Image url here",
+			"heatMap": "Image url here",
+			"vegetationGraph": [{
+					"data": [65, 59, 80, 81, 56, 55, 40],
+					"label": [65, 59, 80, 81, 56, 55, 40] 
+				},
+				{
+					"data": [45, 29, 70, 51, 36, 65, 20],
+					"label": [65, 59, 80, 81, 56, 55, 40]
+				},
+				{
+					"data": [55, 19, 60, 91, 46, 15, 50],
+					"label": [65, 59, 80, 81, 56, 55, 40] 
+				}
+			],
+			"safetyLinee": 80,
+			"wireHeight": 95,
+
+			"rawRBGImage": "overview3_1.png",
+			"algorithmIdentified": "overview3_2.png",
+			"riskProfile_1": "overview3_3.png",
+			"riskProfile_2": "overview3_4.png"
+		}
+	]
+}]

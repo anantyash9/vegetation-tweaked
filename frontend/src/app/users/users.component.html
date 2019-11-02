@@ -1,0 +1,138 @@
+<section class="user_component_cover flex_grid">
+		<!-- left_side_div -->
+		<div class="left_side_div" style="overflow-x: scroll;">
+			<div class="grid_row">
+				<div class="drone_card card"  routerLink = "/overview">
+					<div class="video_tag">
+						<img src="http://localhost:5002/video_feed" class="img-responsive">
+					</div>
+					<!-- <img src="../assets/images/Camera_image.png" alt="" class="img-responsive"> -->
+					<div class="cover_caption">
+						<h4 class="cover_title red_dot">Live Camera Feed</h4>
+						<p class="drone_id">Drone ID: FA12345678 </p>
+					</div>
+				</div>
+				<div class="emt_card card" >
+					<div id="viewer" ></div>
+					<!-- <img src="../assets/images/Empty.png" style="z-index: -1" alt="" class="img-responsive"> -->
+					<div style="bottom: 1%;">
+						<h4 class="cover_title" style="color: black">Point Cloud Data</h4>
+					</div>
+					<!-- <h3 class="graph_title" style=" padding-left: 6%; ">Point Cloud Data -->
+					<!-- </h3> -->
+				</div>
+				<div class="heatmap_card card" id="point_cloud_div">
+					<img src="http://localhost:5003/depth_feed" class="img-responsive">
+					<div class="cover_caption">
+						<h4 class="cover_title">Heat Map</h4>
+					</div>
+				</div>
+				<div class="graph_card card">
+					<div class="graph_card card" style=" padding: unset; ">
+						<div class="chart_graph_div" style="margin-top: 29px;">
+						  <canvas id="vegetationGraph"></canvas>
+						</div>
+					  </div>
+				</div>
+			</div>
+		</div>
+		<!-- right_side_div -->
+
+		<aside class="right_side_div">
+			<div class="sidebar_content">
+
+				<!-- ZIPCODE -->
+				<div class="zipcode_div form_group">
+					<label class="label_form_text inline_flex" for="zipcode">
+						<svg class="zip_svg_icon aside_svg_icon" viewBox="0 0 16 19">
+							<g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+								<path fill="#2282E7" stroke="#2282E7" stroke-linecap="round" stroke-linejoin="round" d="M13.91 7.113c0 5.532-6.955 10.273-6.955 10.273S0 12.645 0 7.113C0 3.184 3.114 0 6.955 0c3.84 0 6.954 3.184 6.954 7.113z"/>
+								<circle cx="6.955" cy="7.113" r="2.608" fill="#F5F8FC"/>
+							</g>
+						</svg>
+						<span>Zip Code</span>
+					</label>
+					<h4 class="update_title">
+							{{zipcode}}
+					</h4>
+				</div>
+	
+				<!-- DATE -->
+				<div class="datepicker form_group">
+					<label class="label_form_text inline_flex" for="date">
+						<svg class="clock_svg_icon aside_svg_icon" width="19" height="20" viewBox="0 0 19 20">
+							<g fill="none" fill-rule="evenodd" stroke-linejoin="round" transform="translate(1 1)">
+									<rect width="16.2" height="14.571" y="3.429" fill="#2282E7" stroke="#2282E7" stroke-linecap="round" rx="1.8"/>
+									<path fill="#2282E7" stroke="#F5F8FC" stroke-linecap="round" d="M5.4 5.143V0H2.7v5.143zM13.5 5.143V0h-2.7v5.143z"/>
+									<path stroke="#F5F8FC" stroke-linecap="square" stroke-width="2" d="M0 8.571h16.2"/>
+							</g>
+						</svg>
+						<span>Date</span>
+					</label>
+					 <h4 class="update_title">
+							{{dateVal}}
+					 </h4>
+				 </div>
+	
+				<!-- TIMEPICKER -->
+				<div class="timepicker form_group">
+					<label class="label_form_text inline_flex" for="time">
+						<svg class="clock_svg_icon aside_svg_icon"  viewBox="0 0 20 20">
+							<g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" transform="translate(1 1)">
+									<circle cx="9" cy="9" r="9" fill="#2282E7" stroke="#2282E7"/>
+									<path stroke="#F5F8FC" stroke-width="2" d="M9 3.6V9l-2.781 2.207"/>
+							</g>
+						</svg>
+						<span>Time</span>
+					</label>
+				 	 <h4 class="update_title">
+							{{timeval}}
+					 </h4>
+				</div>
+	
+				<!-- Timer -->
+				<div class="fixed_timer">
+					<div class="start_stop_timer">
+					<div class="timer_inline_title inline_flex">
+						<svg class="timer_clock"  viewBox="0 0 20 23">
+							<g fill="none" fill-rule="evenodd" transform="translate(0 1)">
+									<circle cx="10" cy="12" r="10" fill="#2F78FC"/>
+									<path stroke="#2F78FC" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M10 1v3"/>
+									<path stroke="#2F78FC" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 2l-1 2"/>
+									<path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 6.723L10 12"/>
+									<circle cx="10" cy="12" r="2" fill="#FFF"/>
+							</g>
+						</svg>						
+						<h3 class="label_form_text">Timer</h3>
+					</div>
+					<h1 class="count_timer_title">00:00:00</h1>
+					<div class="btn_group">
+						<div class="btn-group mr-2" role="group" aria-label="First group">
+							<button type="button" class="btn btn_start" (click)="startScan()">Start</button>
+							<button type="button" class="btn btn_stop" (click)="stopScan()">Stop</button>
+						</div>
+					</div>
+					</div>
+
+				</div>
+			</div>
+		</aside>
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<router-outlet></router-outlet>

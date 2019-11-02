@@ -1,0 +1,135 @@
+<section class="map_component_cover flex_grid">
+	<!-- left_side_div -->
+	<div class="left_side_div">
+		<agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom" [mapTypeId]="'hybrid'">
+				
+				<agm-marker *ngFor="let locations of LocationMarker.Location; let i = index" (markerClick)="clickedMarker(locations.lat, locations.lng, i,zipCodeInput.value, dateInput.value, timeInput.value)" [latitude]=locations.lat  [longitude]=locations.lng 
+					[iconUrl] ="
+						{
+							url: locations.danger == 'high' ? './assets/images/MapMarker_red.svg' : './assets/images/MapMarker_yellow.svg',
+							scaledSize: {
+								width: 60,
+								height: 80
+							}
+						}"
+					>
+				</agm-marker>
+
+			</agm-map>
+	</div>
+	<!-- right_side_div -->
+	<aside class="right_side_div">
+		<div class="sidebar_content">
+			<!-- ZIPCODE -->
+			<div class="zipcode_div form_group">
+				<label class="label_form_text" for="zipcode">Zip Code</label>
+				<div class="input-group">
+					<input type="number" #zipCodeInput class="form-control input_filed"  aria-label="Input group example" aria-describedby="btnGroupAddon" (change)="zipCodeChanged($event)" value="{{Locations[0].Zip_Code}}">
+					<div class="input-group-prepend">
+						<div class="input-group-text group_btn" id="btnGroupAddon">
+							<svg class="zipcode_svg" viewBox="0 0 17 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+								<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+										<g id="Vegetation-Management-3_3-v2" transform="translate(-1856.000000, -142.000000)">
+												<g id="Group-7" transform="translate(1648.000000, 104.000000)">
+														<g id="Group-19" transform="translate(192.000000, 25.000000)">
+																<g id="map-pin-" transform="translate(16.000000, 13.000000)">
+																		<path d="M17,8.69318182 C17,15.4545455 8.5,21.25 8.5,21.25 C8.5,21.25 0,15.4545455 0,8.69318182 C0,3.89207012 3.80557968,1.29538504e-07 8.5,1.29538504e-07 C13.1944203,1.29538504e-07 17,3.89207012 17,8.69318182 L17,8.69318182 Z" id="Path" fill="#FFFFFF"></path>
+																		<circle id="Oval" fill="#2282E7" cx="8.5" cy="8.69318182" r="3.1875"></circle>
+																</g>
+														</g>
+												</g>
+										</g>
+								</g>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- DATE -->
+			<div class="datepicker form_group">
+				<label class="label_form_text" for="date">Date</label>
+					<div class="inline_group"> 
+						<input [owlDateTimeTrigger]="dt3" [owlDateTime]="dt3" class="form-control input_filed" #dateInput>
+						<owl-date-time  [pickerMode]="'dialog'" [pickerType]="'calendar'" #dt3></owl-date-time>
+						<button class="date_select_btn">
+							<svg class="date_picker_svg" viewBox="0 0 17 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+								<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+										<g id="Vegetation-Management-3_3-v2" transform="translate(-1856.000000, -249.000000)">
+												<g id="Group-7-Copy" transform="translate(1648.000000, 209.000000)">
+														<g id="Group-12" transform="translate(192.000000, 25.000000)">
+																<g id="Group-13" transform="translate(17.000000, 16.000000)">
+																		<g id="Group">
+																				<rect id="Rectangle" stroke="#FFFFFF" stroke-width="1.35" fill="#FFFFFF" stroke-linecap="round" x="0" y="3.04761905" width="14.4" height="12.952381" rx="1.8"></rect>
+																				<polygon id="Path" stroke="#2282E7" fill="#FFFFFF" stroke-linecap="round" points="4.8 4.57142857 4.8 0 2.4 0 2.4 4.57142857"></polygon>
+																				<polygon id="Path-Copy" stroke="#2282E7" fill="#FFFFFF" stroke-linecap="round" points="12 4.57142857 12 0 9.6 0 9.6 4.57142857"></polygon>
+																				<path d="M0,7.61904762 L14.4,7.61904762" id="Path" stroke="#2282E7" stroke-width="2" stroke-linecap="square"></path>
+																		</g>
+																</g>
+														</g>
+												</g>
+										</g>
+									</g>
+							</svg>
+						</button>
+					</div>
+				</div>
+
+			<!-- TIMEPICKER -->
+			<div class="timepicker form_group">
+				<label class="label_form_text" for="time">Time</label>
+				<div class="inline_group">
+					<input [owlDateTimeTrigger]="dt4" [owlDateTime]="dt4" class="form-control input_filed" #timeInput>
+					<owl-date-time [pickerMode]="'dialog'" [pickerType]="'timer'" #dt4></owl-date-time>
+					<button class="date_select_btn">
+						<svg class="time_picker_svg" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+									<g id="Vegetation-Management-3_3-v2" transform="translate(-1855.000000, -354.000000)">
+											<g id="Group-7-Copy-2" transform="translate(1648.000000, 314.000000)">
+													<g id="Group-10" transform="translate(192.000000, 25.000000)">
+															<g id="time" transform="translate(16.000000, 16.000000)">
+																	<circle id="Oval" stroke="#FFFFFF" stroke-width="1.35" fill="#FFFFFF" cx="8" cy="8" r="8"></circle>
+																	<polyline id="Path" stroke="#2282E7" stroke-width="2" points="8 3.2 8 8 5.527993 9.96143415"></polyline>
+															</g>
+													</g>
+											</g>
+									</g>
+								</g>
+						</svg>
+					</button>
+				</div>
+			</div>
+
+			<!-- WIND SPEED -->
+			<!-- <div class="wind_speed form_group">
+				<label class="label_form_text">Wind Speed</label>
+				<div class="inline_flex">
+					<svg class="wind_speed_svg" viewBox="0 0 30 22">
+						<g fill="none" fill-rule="evenodd">
+								<path stroke="#2F78FC" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.59 20.41A2 2 0 1 0 21 17H9M24.73 8.73A2.5 2.5 0 1 1 26.5 13H9"/>
+								<path fill="#2F78FC" d="M13.246.101c-3.54-.61-6.95 1.628-7.848 5.15H4.311c-2.385 0-4.317 1.96-4.317 4.375 0 2.416 1.932 4.375 4.317 4.375h7.77c1.01 0 1.972-.219 2.84-.616h3.665c2.384 0 4.317-1.959 4.317-4.375s-1.932-4.374-4.316-4.375C17.768 2.326 15.776.538 13.246.101z"/>
+								<path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16.59 7.59A2 2 0 1 1 18 11H9"/>
+						</g>
+					</svg>
+					<p class="wind_speed_caption">24 km/h</p>
+				</div>
+			</div> -->
+
+			<!-- Live Camera -->
+			<div class="fixed_timer">
+				<button class="btn btn_live_camera" (click) = "liveCamera(zipCodeInput.value, dateInput.value, timeInput.value)"> 
+					<svg class="live_camera_icon" viewBox="0 0 20 20">
+						<g fill="none" fill-rule="evenodd">
+								<circle cx="10" cy="10" r="10" fill="#FFF"/>
+								<circle cx="10" cy="10" r="4.615" fill="#2282E7"/>
+								<circle cx="11.5" cy="8.5" r="1.5" fill="#FFF"/>
+						</g>
+				</svg>
+					<span>Live Camera</span> 
+				</button>
+			</div>
+		</div>
+	</aside>
+</section>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,180 @@
+.user_component_cover{
+	position: relative;
+	width: 100%;
+	height: calc(100% - 62px);
+	overflow-x: hidden;
+}
+.p-relative{
+    position: relative;
+}
+.grid_row{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: wrap;
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px; */
+}
+.card{
+    position: relative;
+    flex: 1 0 49%;
+    margin: 2px;
+}
+.card:nth-child(3n),
+.card:first-child{
+   margin-left: 0px;
+}
+.card:nth-child(2n),
+.card:first-child{
+  margin-top: 0px;
+}
+.card:nth-child(3n),
+.card:last-child{
+    margin-bottom: 0px;
+}
+.cover_caption{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    height: 130px;
+    background-image: linear-gradient(to bottom, rgba(50, 56, 88, 0), rgba(13, 13, 13, 0.57));
+    padding: 0px 15px 15px;
+}
+.cover_title{
+    position: relative;
+    font-family:"myriad-pro", Arial;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    margin: 0px 0px;
+}
+.drone_id{
+    font-family: "myriad-pro", Arial;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+.graph_card{
+    padding: 30px 30px;
+}
+.graph_title{
+    font-family: "myriad-pro", Arial;
+    font-size: 20px;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #323858;
+}
+.trees_strc{
+    position: relative;
+    width: 100%;
+    border-top:1px solid #8e9ba9;
+    padding-top: 30px;
+}
+.trees_details{
+    list-style: none;
+    padding: 15px 0px 0px;
+    margin: 0px;
+}
+.trees_li{
+    display: flex;
+    align-items: center;
+    margin-bottom:15px; 
+}
+.trees_title{
+    font-family: "myriad-pro", Arial;
+    font-size: 20px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #1e262f;
+}
+.tree_svg_icon{
+    width: 16px;
+    height: 18px;
+    margin-right: 15px;
+}
+.tree_inner_icons{
+    margin-right: 24px;
+}
+.circle_svg_icon,
+.hex_svg_icon{
+    width: 12px;
+    height:12px;
+}
+.squ_svg_icon{
+    width: 10px;
+    height: 10px;
+}
+
+@media screen and (max-width:767px){
+    .cover_caption{
+        padding: 0px 15px 15px;
+        font-size: 18px;
+    }
+    .graph_card{
+        padding: 15px 15px;
+    }
+    .graph_title{
+        font-size: 18px;
+    }
+    .cover_title{
+        font-size: 18px;
+    }
+    .cover_caption{
+        height: 110px;
+    }
+    .wire_label,
+    .vegetation_label{
+        font-size: 16px;
+    }
+}
+@media screen and (min-width:1599px){
+    .tree_svg_icon{
+        width: 18px;
+        height: 20px;
+        margin-right: 15px;
+    }
+    .tree_inner_icons{
+        margin-right: 24px;
+    }
+    .circle_svg_icon,
+    .hex_svg_icon{
+        width: 12px;
+        height:12px;
+    }
+    .squ_svg_icon{
+        width: 10px;
+        height: 10px;
+    }
+    .trees_title{
+        font-size: 22px;
+    }
+    .cover_title{
+        font-size: 20px;
+    }
+    .cover_caption{
+        height: 190px;
+        padding: 0px 30px 30px;
+    }
+    .user_component_cover{
+        height: calc(100% - 72px);
+    }
+}

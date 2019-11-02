@@ -1,0 +1,79 @@
+.map_component_cover{
+	position: relative;
+	width: 100%;
+	height: calc(100vh - 62px);
+	overflow-x: hidden;
+}
+agm-map{
+	height:100%;
+}
+
+.fixed_timer{
+	position: absolute;
+	width: auto;
+	bottom:15px;
+	left: 30px;
+}
+.btn_live_camera{
+	width: 230px;
+	height: 50px;
+	padding: 0px 0px;
+  border-radius: 3px;
+  box-shadow: 5px 5px 10px 0 rgba(20, 130, 245, 0.34);
+	background-color: #2282e7;
+	font-family:"myriad-pro", Arial;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+	color: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.live_camera_icon{
+	width: 16px;
+	height: 16px;
+	margin-right: 10px;
+}
+
+/*
+ * Popup
+ */
+ .owl-dt-control.owl-dt-control-button.owl-dt-control-period-button{
+
+ }
+ .owl-dt-control-button{
+		font-size: 16px;
+		color: #1e262f;
+		font-weight: 700;
+ }
+
+@media screen and (max-width:767px){
+	.fixed_timer{
+		position: relative;
+		left: 0px;
+		bottom:0px;
+	}
+}
+@media screen and (min-width:1599px){
+	.btn_live_camera{
+		width: 240px;
+		height: 54px;
+		font-size: 18px;
+	}
+	.live_camera_icon{
+		width: 20px;
+		height: 20px;
+		margin-right: 10px;
+	}
+	.fixed_timer{
+		bottom:30px;
+		left: 30px;
+	}
+	.map_component_cover{
+		height: calc(100vh - 72px);
+	}
+}

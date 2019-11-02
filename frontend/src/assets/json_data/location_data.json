@@ -1,0 +1,118 @@
+[{"Zip_Code": 95910,
+	"date" : "8/29/2019",
+	"time" : "12:23 PM",
+	"Wind_Speed" : "24",
+  "Location":[
+	  {
+		"title": "Stockholm",
+		"lat": 33.6263,
+		"lng": -117.4280,
+		"danger": "high"
+	  },
+	  {
+		"title": "Oslo",
+		"lat": 33.6769,
+		"lng": -117.5175,
+		"danger": "medium"
+	  },
+	  {
+		"title": "Copenhagen",
+		"lat": 33.5333,
+		"lng": -117.5516,
+		"danger": "medium"
+	  }
+	]
+},
+{"Zip_Code": 95911,
+	"date" : "8/29/2019",
+	"time" : "01:00 PM",
+	"Wind_Speed" : "30",
+  "Location":[
+       {
+		"title": "Stockholm",
+		"lat": 33.6263,
+		"lng": -117.4280,
+		"danger": "medium"
+	  },
+	  {
+		"title": "Oslo",
+		"lat": 33.6769,
+		"lng": -117.5175,
+		"danger": "high"
+	  },
+	  {
+		"title": "Copenhagen",
+		"lat": 33.5333,
+		"lng": -117.5516,
+		"danger": "medium"
+	  },
+	  {
+		"title": "Stockholm",
+		"lat": 33.6563,
+		"lng": -117.4280,
+		"danger": "high"
+	  },
+	  {
+		"title": "Oslo",
+		"lat": 33.6069,
+		"lng": -117.5175,
+		"danger": "medium"
+	  },
+	  {
+		"title": "Copenhagen",
+		"lat": 33.5383,
+		"lng": -117.5516,
+		"danger": "medium"
+	  }
+	]
+},
+{"Zip_Code": 95912,
+	"date" : "8/29/2019",
+	"time" : "01:25 PM",
+	"Wind_Speed" : "15",
+  "Location":[
+	  {
+		"title": "Stockholm",
+		"lat": 33.6273,
+		"lng": -117.4285,
+		"danger": "high"
+	  },
+	  {
+		"title": "Oslo",
+		"lat": 33.6789,
+		"lng": -117.5180,
+		"danger": "medium"
+	  },
+	  {
+		"title": "Copenhagen",
+		"lat": 33.5342,
+		"lng": -117.5561,
+		"danger": "medium"
+	  }
+	]
+},
+{"Zip_Code": 95913,
+	"date" : "8/29/2019",
+	"time" : "02:08 PM",
+	"Wind_Speed" : "40",
+  "Location":[
+	  {
+		"title": "Stockholm",
+		"lat": 33.6236,
+		"lng": -117.4209,
+		"danger": "high"
+	  },
+	  {
+		"title": "Oslo",
+		"lat": 33.6750,
+		"lng": -117.5186,
+		"danger": "high"
+	  },
+	  {
+		"title": "Copenhagen",
+		"lat": 33.5303,
+		"lng": -117.5505,
+		"danger": "medium"
+	  }
+	]
+}]

@@ -1,0 +1,379 @@
+.user_component_cover{
+	position: relative;
+	width: 100%;;
+	height: calc(100% - 62px);
+	overflow-x: hidden;
+}
+.p-relative{
+    position: relative;
+}
+.grid_row{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px; */
+    display: flex;
+    flex-flow: wrap;
+}
+.card{
+    position: relative;
+    flex: 1 0 49%;
+    margin: 2px;
+}
+.card:nth-child(3n),
+.card:first-child{
+   margin-left: 0px;
+}
+.card:nth-child(2n),
+.card:first-child{
+  margin-top: 0px;
+}
+.card:nth-child(3n),
+.card:last-child{
+    margin-bottom: 0px;
+}
+
+.cover_caption{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    height: 130px;
+    background-image: linear-gradient(to bottom, rgba(50, 56, 88, 0), rgba(13, 13, 13, 0.57));
+    padding: 0px 15px 15px;
+}
+.red_dot:before{
+    content: "";
+    width: 14px;
+    height: 14px;
+    background: #fc2f2f;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 0;
+}
+.red_dot{
+    padding-left: 25px;
+}
+.cover_title{
+    position: relative;
+    font-family:"myriad-pro", Arial;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    margin: 0px 0px;
+}
+.drone_id{
+    font-family: "myriad-pro", Arial;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+.graph_card{
+    padding: 30px 30px;
+}
+.graph_title{
+    font-family: "myriad-pro", Arial;
+    font-size: 18px;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #323858;
+}
+.chart_graph_div{
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+}
+.count_timer_title{
+	font-family:"myriad-pro", Arial;
+	font-size: 22px;
+	font-weight: 700;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.19;
+	letter-spacing: normal;
+	color: #1e262f;
+	padding: 12px 0px 15px 32px;
+}
+.timer_inline_title .label_form_text{
+	margin: 0px;
+	padding-left: 15px;
+}
+.timer_clock{
+	width: 16px;
+	height: 18px;
+	margin-top: -2px;
+}
+.start_stop_timer{
+	width: 100%;
+	height: auto;
+	padding: 15px 15px;
+    border-radius: 3px;
+    box-shadow: 0 4px 10px 0 rgba(85, 98, 112, 0.16);
+    background-color: #ffffff;
+    margin-bottom: 40px;
+}
+
+.btn:focus,
+.btn:active{
+    outline: 0px;
+    box-shadow: none;
+}
+.btn_start,
+.btn_stop{
+    font-family:"myriad-pro", Arial;
+    font-size: 12px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    height: 38px;
+    border-radius: 3px !important;
+    text-transform: uppercase;
+    padding: 0px 22px;
+}
+.btn_start{
+    opacity: 0.4;
+    color:#2282e7;
+    border: solid 1px #2282e7;
+    background-color: rgba(34, 130, 231, 0.16);
+    margin: 0px 8px 0px 0px;
+}
+.btn_stop{
+    color: #ff2626;
+    border: solid 1px #ff2626;
+    background-color: rgba(255, 38, 38, 0.16);
+}
+.btn_generate{
+    width: 100%;
+    height: 50px;
+    border-radius: 3px;
+    box-shadow: 5px 5px 10px 0 rgba(20, 130, 245, 0.34);
+    background-color: #2282e7;
+    font-family:"myriad-pro", Arial;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 0px 15px;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+iframe{
+    overflow:hidden;
+}
+.frame_tag{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.frame_tag img{
+    width: 100%;
+    height: 100%;
+}
+
+.video_tag{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.video_tag video{
+    width: 100%;
+    height: 100%;
+}
+
+.graph_labels{
+    width: 100%;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.labels_caption{
+    position: relative;
+    cursor: pointer;
+}
+.wire_label{
+    font-family: "myriad-pro", Arial;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #fc2f2f;
+    margin-right: 40px;
+}
+.vegetation_label{
+    font-family: "myriad-pro", Arial;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #35ad44; 
+}
+
+.wire_label:before{
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -26px;
+    width: 18px;
+    height: 3px;
+    background: #fc2f2f;
+}
+.vegetation_label:before{
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 17px;
+    top:1px;
+    left: -26px;
+    background: url('../../assets/images/veg.svg') no-repeat center center;
+    background-size: cover;
+}
+.dis_graph{
+    font-family: "myriad-pro", Arial;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #1e262f;
+    margin-top: -15px;
+    text-align: center;
+}
+.between_both{
+    position: absolute;
+    top: 50%;
+    left: -140px;
+    transform: rotate(270deg);
+}
+.generate_svg_icon{
+    width: 14px;
+    height: 18px;
+    margin-right: 14px;
+}
+
+@media screen and (max-width:767px){
+    .cover_caption{
+        padding: 0px 15px 15px;
+        font-size: 18px;
+    }
+    .red_dot{
+        padding-left: 18px;
+    }
+    .red_dot:before{
+        width: 10px;
+        height: 10px;
+    }
+    .drone_id{
+        font-size: 16px;
+        text-align: right;
+    }
+    .graph_card{
+        padding: 15px 15px;
+    }
+    .graph_title{
+        font-size: 18px;
+    }
+    .cover_title{
+        font-size: 18px;
+    }
+    .cover_caption{
+        height: 110px;
+    }
+    .wire_label,
+    .vegetation_label{
+        font-size: 16px;
+    }
+    .frame_tag{
+        height: 250px;
+    }
+}
+@media screen and (min-width:1599px){
+    .count_timer_title{
+        font-size: 24px;
+        padding: 12px 0px 15px 32px;
+    }
+    .btn_start,
+    .btn_stop{
+        font-size: 14px;
+        height: 42px;
+        padding: 0px 24px;
+    }
+    .btn_generate{
+        height: 54px;
+        font-size: 18px;
+        padding: 0px 15px;
+    }
+    .cover_title{
+        font-size: 20px;
+    }
+    .red_dot:before{
+        width: 16px;
+        height: 16px;
+        top: 2px;
+    }
+    .red_dot{
+        padding-left: 25px;
+    }
+    .drone_id{
+        font-size: 18px;
+    }
+    .between_both{
+        left: -175px;
+    }
+    .dis_graph{
+        font-size: 18px;
+        margin-top: -15px;
+    }
+    .graph_title{
+        font-size: 20px;
+    }
+    .wire_label{
+        font-size: 18px;
+        margin-right: 40px;
+    }
+    .vegetation_label{
+        font-size: 18px;
+    }
+    .cover_caption{
+        height: 190px;
+        padding: 0px 30px 30px;
+    }
+    .generate_svg_icon{
+        width: 16px;
+        height: 20px;
+    }
+    .user_component_cover{
+        height: calc(100% - 72px);
+        overflow: hidden;
+    }
+}
