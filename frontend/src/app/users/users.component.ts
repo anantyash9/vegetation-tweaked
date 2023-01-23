@@ -10,6 +10,7 @@ import * as _ from "lodash";
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { MapComponent } from "../map/map.component";
 import { environment } from "../../environments/environment";
+import { promise } from "protractor";
 
 @Component({
   selector: "users",
@@ -97,22 +98,20 @@ export class UsersComponent implements OnInit {
     this.timeval = this.env.glTimeVal; */
     let self = this;
     function getDataSets() {
+      let data= {data:[{x:1,y:2},{x:2,y:2},{x:3,y:3},{x:3.1,y:2},{x:3.2,y:3},{x:3.3,y:3}],safety:2}
+      // generate random data and return it as a promise
+      for (let i = 0; i < 30; i++) {
+        let x=data.data[i].x+0.1;
+        // y is a random number between 1.5 and 2.5 
+        let y= Math.random() * (3 - 1) + 1;
+        data.data.push({x:x,y:y});
+      }
       return new Promise((resolve, reject) => {
-        var data = {
-          safetyLimit: 0,
-          data: []
-        };
-        self.page += 1;
-        self._http
-          .get(self.lineDataURL + "?page = " + self.page)
-          .toPromise()
-          .then(output => {
-            resolve(output);
-          })
-          .catch(err => {
-            resolve(data);
-          });
-      });
+        setTimeout(() => {
+          resolve(data);
+        }, 1000);
+      })
+
     }
     function findX(pos, neg, sl) {
       return ((sl - pos.y) * (pos.x - neg.x)) / (pos.y - neg.y) + pos.x;
@@ -334,6 +333,6 @@ export class UsersComponent implements OnInit {
 
         scatterChart.update();
       });
-    }, 100);
+    }, 10000);
   }
 }
